@@ -102,6 +102,6 @@ button:active {
   }
 
   .textbox:focus {
-    width: 70%px;
+    width: 70%;
   }
 }
