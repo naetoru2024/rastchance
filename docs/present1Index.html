@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-widthm initial-scale=1.0">
+    <link rel="stylesheet" href="../public/style.css">
+    <link rel="stylesheet" href="../public/style.js">
+    <link href="https://fonts.googleapis.com/earlyaccess/nicomoji.css" rel="stylesheet">
+    <title>チケット管理システム</title>
+    <script>
+      let usedTickets = [];
+      let canuseTickets = ["041201","041202","041203","041204","041205","041206","041207","041208","041209","041210","041211","041212","041213","041214","041215","041216","041217","041218","041219","041220","041221","041222","041223"]
+  
+      function useTicket(ticketNumber) {
+        if (!(canuseTickets.includes(ticketNumber))) {
+          alert("そんなチケットの番号は存在しないよ。お前はアホなんか？？")
+        } else if (usedTickets.includes(ticketNumber)) {
+          alert("そのチケットは既に使用済みです。２回も使おうとするな。贅沢な。");
+        } else {
+          usedTickets.push(ticketNumber);
+          alert("チケットを使用しました！！！");
+        }
+      }
+  
+      function goBack() {
+        window.history.back();
+      }
+    </script>
+  </head>
+  <body>
+    <h1>チケットシステム</h1>
+
+
+
+    <div id="containter">
+       <form method="get"  target="_blank">
+         <input class="textbox" type="text" id="ticketNumber" name="q" placeholder="Ticketnumber" onEnter="send()" autocomplete="off" maxlength="60">
+       </form>
+     <button onclick="useTicket(document.getElementById('ticketNumber').value)">Let's Go！</button>
+    </div> 
+  </body>
+</html>
