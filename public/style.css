@@ -90,7 +90,18 @@ button:active {
   background-color: #b1fffb;
 }
 
+
 .textbox:focus {
   width: 500px;
   outline: none;
+}
+
+@media (max-width: 727px) {
+  .textbox {
+    width:55%;
+  }
+
+  .textbox:focus {
+    width: 70%px;
+  }
 }
